@@ -1,186 +1,179 @@
-# 🚀 3D Portfolio
+# 🚀 Rueben Kouwah Liu — 3D Developer Portfolio
 
-A jaw-dropping developer portfolio packed with interactive 3D animations, buttery smooth transitions, and a space-themed aesthetic. Not your average portfolio template! This one has a fully interactive 3D keyboard where each keycap is a skill.
+![Portfolio Preview](./public/assets/projects-screenshots/portfolio/landing.png)
 
-> **Free to use!** This portfolio is open source. If you use it, a credit/link back would be really appreciated 🙏
+An immersive 3D developer portfolio showcasing my work in **Full-Stack Development, Data Analytics, and AI-powered applications**.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Naresh-Khatri/3d-portfolio)
+Built with modern web technologies, interactive 3D experiences, and performance-focused architecture to create a memorable and professional web presence.
 
-![Portfolio Preview](https://github.com/Naresh-Khatri/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
+---
 
-## ✨ Features
+## 👨‍💻 About Me
 
-- **Interactive 3D Keyboard** — Custom Spline keyboard where each keycap represents a skill, revealing titles and descriptions on hover/press
-- **Buttery Animations** — GSAP + Framer Motion powered scroll, hover, and reveal animations
-- **Space Theme** — Floating particles on a dark canvas for a cosmic vibe
-- **Light & Dark Mode** — Full theme support with cheeky disclaimer toasts
-- **Responsive** — Works across all screen sizes
-- **Contact Form** — Email delivery via Resend
-- **Analytics** _(optional)_ — Umami analytics integration
+Hi, I’m **Rueben Kouwah Liu**  
+B.Tech Computer Science (Amity University) — CGPA: 7.18
 
-## 🛠️ Tech Stack
+I specialize in:
 
-| Layer | Technologies |
-|---|---|
-| **Framework** | Next.js 14, React 18, TypeScript |
-| **Styling** | Tailwind CSS, Shadcn UI, Aceternity UI |
-| **Animation** | GSAP, Framer Motion |
-| **3D** | Spline Runtime |
-| **Email** | Resend |
-| **Misc** | Lenis (smooth scroll), Zod, next-themes |
+- Full-Stack Web Development
+- Data Analytics & Machine Learning
+- AI-powered automation systems
+- Interactive UI/UX engineering
+
+📍 Noida, Uttar Pradesh, India  
+📧 rueliu1@gmail.com  
+🔗 GitHub: https://github.com/codeRueben  
+🔗 LinkedIn: (Add your LinkedIn profile link)
+
+---
+
+## ✨ Portfolio Features
+
+- 🎮 Interactive 3D Skill Keyboard (Spline powered)
+- 🌌 Space-themed animated background
+- ⚡ GSAP + Framer Motion smooth animations
+- 🌗 Light / Dark Mode toggle
+- 📊 Dynamic project showcase
+- 📩 Integrated contact form
+- 📱 Fully responsive design
+- 🚀 Production-ready deployment on Vercel
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+
+### Backend
+- Node.js
+- REST APIs
+- Prisma ORM
+- MySQL
+- Firebase
+
+### Data & Analytics
+- Python
+- Pandas
+- NumPy
+- scikit-learn
+- SQL
+- Excel
+- Recharts
+
+### 3D & Animation
+- Spline Runtime
+- GSAP
+- Framer Motion
+
+---
+
+## 📌 Featured Projects
+
+### 💰 AI Finance Tracker  
+AI-powered SMS transaction parser that automates financial tracking and eliminates manual entry.
+
+**Key Highlights:**
+- Secure authentication & protected API routes
+- AI-based SMS parsing
+- Dynamic financial dashboards
+- Optimized relational database schema
+
+🔗 Live Demo:  
+https://ai-finance-tracker-9nukdfgov-ruebens-projects-0b064456.vercel.app/
+
+---
+
+### 📊 Customer Churn Analysis  
+Machine Learning churn prediction system using the IBM Telco dataset.
+
+**Key Highlights:**
+- Analysed 7,043 telecom records
+- Compared Logistic Regression, Random Forest, Decision Tree & Gradient Boosting
+- Best AUC-ROC Score: 0.87
+- Identified high-risk churn segments
+
+🔗 GitHub Repository:  
+https://github.com/codeRueben/telco-churn-analysis
+
+---
+
+### 🗺 Land Boundary Mapping App  
+GPS-based Flutter app for land boundary verification and area calculation using Mapbox SDK.
+
+🔗 GitHub Repository:  
+https://github.com/codeRueben/Land-boundary-app
+
+---
+
+## 🏢 Professional Experience
+
+### Data Analyst Intern  
+Directorate of Economics and Statistics, Government of Nagaland  
+(May 2025 – June 2025)
+
+- Automated data cleaning using Python (Pandas, NumPy)
+- Built SQL dashboards and Excel automation
+- Reduced manual reporting workload by 40%
+- Developed district-level visualization dashboards for regional planning
+
+---
+
+## 🎓 Education
+
+**Amity University, Noida**  
+B.Tech in Computer Science (2022 – 2026)
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
 - Node.js (v18+)
-- pnpm (recommended), npm, or yarn
+- pnpm (recommended) / npm / yarn
 
 ### Installation
 
-1. **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/Naresh-Khatri/3d-portfolio.git
-    cd 3d-portfolio
-    ```
-
-2. **Install dependencies:**
-
-    ```bash
-    pnpm install
-    ```
-
-3. **Set up environment variables:**
-
-    Copy `.env.example` to `.env.local` and fill in the values:
-
-    ```bash
-    cp .env.example .env.local
-    ```
-
-    | Variable | Required | Description |
-    |---|---|---|
-    | `RESEND_API_KEY` | Yes | API key from [Resend](https://resend.com) for the contact form |
-    | `NEXT_PUBLIC_WS_URL` | No | WebSocket server URL for realtime features (cursors, chat, presence) |
-    | `UMAMI_DOMAIN` | No | Umami analytics script URL |
-    | `UMAMI_SITE_ID` | No | Umami website ID |
-
-4. **Run the development server:**
-
-    ```bash
-    pnpm dev
-    ```
-
-5. Open [http://localhost:3000](http://localhost:3000) and see the magic ✨
-
----
-
-## 🎨 Make It Your Own
-
-All personal info is centralized in [`src/data/config.ts`](src/data/config.ts). Edit this single file to rebrand the portfolio:
-
-```ts
-const config = {
-  title: "Your Name | Your Title",
-  description: {
-    long: "Your long description for SEO...",
-    short: "Your short description...",
-  },
-  keywords: ["your", "keywords"],
-  author: "Your Name",
-  email: "you@example.com",
-  site: "https://yoursite.com",
-
-  // GitHub stars button in the header
-  githubUsername: "your-github-username",
-  githubRepo: "your-repo-name",
-
-  social: {
-    twitter: "https://x.com/you",
-    linkedin: "https://linkedin.com/in/you",
-    instagram: "https://instagram.com/you",
-    facebook: "https://facebook.com/you",
-    github: "https://github.com/you",
-  },
-};
+1. Clone the repository:
+```bash
+git clone https://github.com/codeRueben/3d-portfolio
 ```
+2.	Install dependencies:
 
-Other files you'll want to customize:
-
-| File | What to change |
-|---|---|
-| `src/data/projects.tsx` | Your projects, screenshots, descriptions, and tech stacks |
-| `src/data/constants.ts` | Skills list (name, description, icon) and work experience |
-| `public/assets/` | Your images, OG image, and project screenshots |
-
----
-
-## ⌨️ Updating the 3D Keyboard Skills
-
-The 3D keyboard keycaps are baked into a Spline file. To update the skills displayed on the keyboard:
-
-1. **Import** the `public/assets/skills-keyboard.spline` file into [Spline](https://spline.design/)
-2. **Unhide** the keycap objects you want to edit
-3. **Update** the logo images on each keycap to your new skill icons
-4. **Rename** each keycap object to match the skill's `name` field in `src/data/constants.ts` (e.g. `js`, `react`, `docker`)
-5. **Hide** all keycap objects again
-6. **Export** the scene and overwrite `public/assets/skills-keyboard.spline`
-
-After updating the Spline file, make sure `src/data/constants.ts` has matching entries for every skill on the keyboard:
-
-```ts
-// Each keycap object name in Spline must match a key in SKILLS
-export const SKILLS: Record<SkillNames, Skill> = {
-  js: { name: "js", label: "JavaScript", shortDescription: "...", ... },
-  react: { name: "react", label: "React", shortDescription: "...", ... },
-  // ... add/remove entries to match your keyboard
-};
+```bash
+pnpm install
 ```
+3.	Run development server:
+```bash
+pnpm dev
+```
+4.	Open:
+```bash
+http://localhost:3000
+```
+🌍 Deployment
 
-The `SkillNames` enum, `SKILLS` record, and the Spline keycap names must all stay in sync for the keyboard interactions to work correctly.
+This portfolio is deployed on Vercel.
 
----
+You can deploy your own version instantly:
+📄 License
 
-## 🔌 Realtime Features (Optional)
+This portfolio is customized and maintained by Rueben Kouwah Liu.
 
-The portfolio supports optional realtime features powered by a **separate backend API**:
+Inspired by an open-source 3D portfolio template and fully rebranded with original projects and professional experience.
 
-- 🖱️ **Live cursors** — See other visitors' cursors in realtime
-- 👥 **Online presence** — Shows who's currently on the site
-- 💬 **Chat** — Live chat between visitors
+⸻
 
-These features activate automatically when the `NEXT_PUBLIC_WS_URL` environment variable is set. Without it, the portfolio works perfectly fine as a static site — no realtime features, no backend dependency.
+🤝 Let’s Connect
 
-> [!NOTE]
-> The backend API is **not open source**. This is intentional! Too many people have cloned the portfolio and claimed they built it from scratch. The realtime server stays private to keep the live experience unique make make it standout.
+If you’re interested in collaboration, internships, or full-time opportunities:
+
+📧 rueliu1@gmail.com
+🔗 https://github.com/codeRueben
 
 
----
 
-## 🚀 Deployment
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Naresh-Khatri/3d-portfolio)
-
-This site is deployed on **Vercel**. To deploy your own:
-
-1. Push your code to a GitHub repository
-2. Connect the repository to [Vercel](https://vercel.com)
-3. Add your environment variables in the Vercel dashboard
-4. Vercel handles the rest — automatic deployments on every push
-
----
-
-## 🤝 Contributing
-
-If you'd like to contribute or suggest improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-If you use this portfolio, a credit or link back to the [original repo](https://github.com/Naresh-Khatri/3d-portfolio) would be much appreciated ❤️
