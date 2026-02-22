@@ -1,11 +1,14 @@
 .nav {
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 
   .wrapper {
     position: relative;
     display: flex;
     gap: 50px;
-    margin-bottom: 12px; // prev 80px
+    margin-top: clamp(24px, 6vh, 64px);
+    margin-bottom: 12px;
   }
 
   .container {
@@ -19,6 +22,7 @@
   .nav {
     .wrapper {
       margin-bottom: 0px;
+      margin-top: clamp(28px, 8vh, 90px);
       justify-content: space-between;
     }
   }

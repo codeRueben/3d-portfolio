@@ -1,117 +1,137 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-// @ts-ignore
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/core";
 
-import "@splidejs/react-splide/css";
+type WebsiteProof = {
+  label: string;
+  url: string;
+  screenshot: string;
+};
 
-const PROJECTS = [
+type ResumeProject = {
+  id: number;
+  name: string;
+  description: string;
+  stack: string;
+  proofs: WebsiteProof[];
+};
+
+const PROJECTS: ResumeProject[] = [
   {
     id: 1,
-    name: "Coding Ducks",
-    description: `Dive into CodingDucks, a fusion of CodePen's creative playground with LeetCode's problem-solving realm.
-Whether you're a newbie or a seasoned coder, join the community to paddle through coding adventures and let your
-creativity soar.`,
-    link: "https://www.codingducks.live",
-    images: [
-      "/assets/projects-screenshots/codingducks/1.png",
-      "/assets/projects-screenshots/codingducks/2.png",
-      "/assets/projects-screenshots/codingducks/3.png",
-      "/assets/projects-screenshots/codingducks/4.png",
-      "/assets/projects-screenshots/codingducks/5.png",
+    name: "Full-Stack AI Finance Tracker",
+    description:
+      "AI-driven transaction tracker built with secure full-stack architecture and responsive financial charts.",
+    stack: "Next.js 15, TypeScript, Prisma",
+    proofs: [
+      {
+        label: "Live Demo",
+        url: "https://ai-finance-tracker-9nukdfgov-ruebens-projects-0b064456.vercel.app/",
+        screenshot:
+          "https://image.thum.io/get/width/1200/noanimate/https://ai-finance-tracker-9nukdfgov-ruebens-projects-0b064456.vercel.app/",
+      },
     ],
   },
   {
     id: 2,
-    name: "Ghost Chat",
-    description: `GhostChat is an anonymous messaging app that allows users to connect without revealing their identities. 
-Join the community for intriguing conversations and mysterious encounters.`,
-    link: "https://ghostchatt.vercel.app/",
-    images: [
-      "/assets/projects-screenshots/ghostchat/1.png",
-      "/assets/projects-screenshots/ghostchat/2.png",
-      "/assets/projects-screenshots/ghostchat/3.png",
-      "/assets/projects-screenshots/ghostchat/4.png",
+    name: "Customer Churn Analysis (IBM Telco Dataset)",
+    description:
+      "Churn modeling and risk scoring workflow across 7,043 telecom records with model benchmarking and reporting.",
+    stack: "Python, scikit-learn",
+    proofs: [
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/codeRueben/telco-churn-analysis",
+        screenshot:
+          "https://opengraph.githubassets.com/1/codeRueben/telco-churn-analysis",
+      },
+      {
+        label: "Dashboard",
+        url: "https://codeRueben.github.io/telco-churn-analysis/telco_dashboard.html",
+        screenshot:
+          "https://image.thum.io/get/width/1200/noanimate/https://codeRueben.github.io/telco-churn-analysis/telco_dashboard.html",
+      },
+      {
+        label: "Executive Report",
+        url: "https://codeRueben.github.io/telco-churn-analysis/executive_summary.html",
+        screenshot:
+          "https://image.thum.io/get/width/1200/noanimate/https://codeRueben.github.io/telco-churn-analysis/executive_summary.html",
+      },
     ],
   },
   {
     id: 3,
-    name: "Coupon Luxury",
-    description: `Welcome to CouponLuxury, your destination for exclusive discounts and savings. Explore the platform to find the
-best deals on luxury brands and products. Join our savvy community of shoppers and unlock access to premium coupons.`,
-    link: "https://www.couponluxury.com/",
-    images: [
-      "/assets/projects-screenshots/couponluxury/1.png",
-      "/assets/projects-screenshots/couponluxury/2.png",
-      "/assets/projects-screenshots/couponluxury/3.png",
-      "/assets/projects-screenshots/couponluxury/4.png",
-      "/assets/projects-screenshots/couponluxury/5.png",
+    name: "Land Boundary Mapping App",
+    description:
+      "GPS-enabled boundary verification and area calculation tool focused on field workflows.",
+    stack: "Flutter, Mapbox SDK",
+    proofs: [
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/codeRueben/Land-boundary-app",
+        screenshot:
+          "https://opengraph.githubassets.com/1/codeRueben/Land-boundary-app",
+      },
     ],
   },
   {
     id: 4,
-    name: "JNTUA Results Analyser",
-    description: `the go-to app for JNTUA students, empowering them to analyze, compare, and view classwise results effortlessly.
-     Dive into your academic journey with ease, track your progress, and gain valuable insights.`,
-    link: "/projects/4",
-    images: ["/assets/projects-screenshots/jra/1.png"],
+    name: "Cross-Language Voice Cloning",
+    description:
+      "Voice synthesis research project that lowered WER by 12% and improved generated audio quality by 20%.",
+    stack: "TensorFlow, PyTorch",
+    proofs: [],
   },
 ];
-function Page() {
+
+export default function Page() {
   return (
-    <>
-      <div className="container mx-auto md:px-[50px] xl:px-[150px] text-zinc-300 h-full">
-        <h1 className="text-4xl mt-[100px] mb-[50px]">Projects</h1>
-        <ul className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-around ">
-          {PROJECTS.map((project) => (
-            <li
-              className="w-[300px] h-[400px] border-[.5px] rounded-md border-zinc-600"
-              key={project.id}
-              style={{ backdropFilter: "blur(2px)" }}
-            >
-              <div className="h-[200px]">
-                <Splide
-                  options={{
-                    type: "loop",
-                    interval: 3000,
-                    autoplay: true,
-                    speed: 2000,
-                    perMove: 1,
-                    rewind: true,
-                    easing: "cubic-bezier(0.25, 1, 0.5, 1)",
-                    arrows: false,
-                  }}
-                  aria-label="My Favorite Images"
-                >
-                  {project.images.map((image) => (
-                    <SplideSlide key={image}>
-                      <Image
-                        src={image}
-                        alt={`screenshot of "${project.name}`}
-                        className="w-[300px] h-[200px] rounded-md bg-zinc-900 "
-                        width={300}
-                        height={400}
-                        style={{ height: "200px" }}
-                      />
-                    </SplideSlide>
-                  ))}
-                </Splide>
+    <div className="container mx-auto px-4 md:px-[50px] xl:px-[150px] text-zinc-300 py-28">
+      <h1 className="text-4xl mb-3">Projects</h1>
+      <p className="text-zinc-500 mb-10 font-mono text-sm">
+        Resume-aligned projects with website proof screenshots.
+      </p>
+
+      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {PROJECTS.map((project) => (
+          <li
+            key={project.id}
+            className="border border-zinc-700 rounded-xl p-5 bg-black/30 backdrop-blur"
+          >
+            <h2 className="text-2xl mb-2">{project.name}</h2>
+            <p className="text-zinc-400 text-sm mb-2">{project.description}</p>
+            <p className="text-zinc-500 text-xs mb-4 font-mono">{project.stack}</p>
+
+            {project.proofs.length > 0 ? (
+              <div className="grid grid-cols-1 gap-4">
+                {project.proofs.map((proof) => (
+                  <Link
+                    key={proof.url}
+                    href={proof.url}
+                    target="_blank"
+                    rel="noopener"
+                    className="border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-600 transition-colors"
+                  >
+                    <Image
+                      src={proof.screenshot}
+                      alt={`Proof screenshot: ${proof.label}`}
+                      width={1200}
+                      height={720}
+                      className="w-full h-48 object-cover bg-zinc-900"
+                    />
+                    <div className="p-3 text-sm font-mono">{proof.label}</div>
+                  </Link>
+                ))}
               </div>
-              <div className="p-4 text-zinc-300">
-                <h2 className="text-xl">{project.name}</h2>
-                <p className="mt-2 text-xs text-zinc-500">
-                  {project.description}
-                </p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+            ) : (
+              <p className="text-zinc-500 text-xs font-mono">
+                No public website link is listed for this project in the resume.
+              </p>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
-
-export default Page;

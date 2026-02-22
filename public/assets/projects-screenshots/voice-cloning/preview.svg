@@ -1,0 +1,20 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1030"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect x="70" y="78" width="1060" height="564" rx="28" fill="#1F1340" stroke="#A78BFA" stroke-width="2"/>
+  <text x="120" y="180" fill="#C4B5FD" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Cross-Language Voice Cloning
+  </text>
+  <text x="120" y="240" fill="#EDE9FE" font-size="28" font-family="Arial, Helvetica, sans-serif">
+    TensorFlow • PyTorch • WER -12% • Audio Quality +20%
+  </text>
+  <rect x="120" y="300" width="960" height="260" rx="18" fill="#2E1065"/>
+  <path d="M170 430C210 360 250 500 290 430C330 360 370 500 410 430C450 360 490 500 530 430C570 360 610 500 650 430C690 360 730 500 770 430C810 360 850 500 890 430C930 360 970 500 1010 430" stroke="#DDD6FE" stroke-width="8" stroke-linecap="round"/>
+  <rect x="170" y="355" width="75" height="150" rx="37.5" fill="#8B5CF6" fill-opacity="0.4" stroke="#DDD6FE" stroke-width="4"/>
+  <circle cx="207.5" cy="390" r="14" fill="#EDE9FE"/>
+</svg>

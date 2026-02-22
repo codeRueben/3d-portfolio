@@ -1,0 +1,25 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1F0F"/>
+      <stop offset="1" stop-color="#1C4D2A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect x="70" y="78" width="1060" height="564" rx="28" fill="#102417" stroke="#4ADE80" stroke-width="2"/>
+  <text x="120" y="180" fill="#86EFAC" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Land Boundary Mapping App
+  </text>
+  <text x="120" y="240" fill="#DCFCE7" font-size="28" font-family="Arial, Helvetica, sans-serif">
+    Flutter • Mapbox • GPS Verification and Area Calculation
+  </text>
+  <rect x="120" y="300" width="960" height="260" rx="18" fill="#14532D"/>
+  <path d="M220 500L320 360L500 330L660 420L880 350L980 480L760 540L410 560Z" fill="#16A34A" fill-opacity="0.35" stroke="#BBF7D0" stroke-width="6"/>
+  <circle cx="320" cy="360" r="10" fill="#F0FDF4"/>
+  <circle cx="500" cy="330" r="10" fill="#F0FDF4"/>
+  <circle cx="660" cy="420" r="10" fill="#F0FDF4"/>
+  <circle cx="880" cy="350" r="10" fill="#F0FDF4"/>
+  <circle cx="980" cy="480" r="10" fill="#F0FDF4"/>
+  <circle cx="760" cy="540" r="10" fill="#F0FDF4"/>
+  <circle cx="410" cy="560" r="10" fill="#F0FDF4"/>
+</svg>
