@@ -8,7 +8,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { usePreloader } from "../preloader";
 import { BlurIn, BoxReveal } from "../reveal-animations";
 import ScrollDownIcon from "../scroll-down-icon";
 import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
@@ -17,8 +16,6 @@ import { config } from "@/data/config";
 import SectionWrapper from "../ui/section-wrapper";
 
 const HeroSection = () => {
-  const { isLoading } = usePreloader();
-
   return (
     <SectionWrapper id="hero" className={cn("relative w-full h-screen")}>
       <div className="grid md:grid-cols-2">
@@ -30,8 +27,7 @@ const HeroSection = () => {
             "pt-28 sm:pb-16 md:p-20 lg:p-24 xl:p-28"
           )}
         >
-          {!isLoading && (
-            <div className="flex flex-col">
+          <div className="flex flex-col">
               <div>
                 <BlurIn delay={0.7}>
                   <p
@@ -81,20 +77,20 @@ const HeroSection = () => {
                 </BlurIn>
               </div>
               <div className="mt-8 flex flex-col gap-3 w-fit">
-                <Link
-                  href={
-                    "https://drive.google.com/file/d/1MTSsUA8V7Po2AsNXT8kZ5sLOpzC8l7qm/view?usp=sharing"
-                  }
-                  target="_blank"
-                  className="flex-1"
-                >
-                  <BoxReveal delay={2} width="100%" >
-                    <Button className="flex items-center gap-2 w-full">
-                      <File size={24} />
-                      <p>Resume</p>
-                    </Button>
-                  </BoxReveal>
-                </Link>
+                {(config.social.resume || "").trim() && (
+                  <Link
+                    href={config.social.resume!}
+                    target="_blank"
+                    className="flex-1"
+                  >
+                    <BoxReveal delay={2} width="100%" >
+                      <Button className="flex items-center gap-2 w-full">
+                        <File size={24} />
+                        <p>Resume</p>
+                      </Button>
+                    </BoxReveal>
+                  </Link>
+                )}
                 <div className="md:self-start flex gap-3">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
@@ -112,14 +108,16 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">
-                    <Link
-                      href={config.social.twitter}
-                      target="_blank"
-                    >
-                      <Button variant={"outline"}>
-                        <SiX size={24} />
-                      </Button>
-                    </Link>
+                    {config.social.twitter && (
+                      <Link
+                        href={config.social.twitter}
+                        target="_blank"
+                      >
+                        <Button variant={"outline"}>
+                          <SiX size={24} />
+                        </Button>
+                      </Link>
+                    )}
                     <Link
                       href={config.social.github}
                       target="_blank"
@@ -142,7 +140,6 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          )}
         </div>
         <div className="grid col-span-1"></div>
       </div>
