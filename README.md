@@ -1,6 +1,6 @@
 # 🚀 Rueben Kouwah Liu — 3D Developer Portfolio
 
-![Portfolio Preview](./public/assets/projects-screenshots/portfolio/landing.png)
+![Portfolio Preview](./public/assets/projects-screenshots/portfolio/preview.png)
 
 An immersive 3D developer portfolio showcasing my work in **Full-Stack Development, Data Analytics, and AI-powered applications**.
 
